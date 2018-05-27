@@ -8,7 +8,7 @@ export const exampleConstant = () => [
     stateMutability: "view",
     type: "function",
   },
-]
+];
 
 export const exampleAbi = () => [
   {

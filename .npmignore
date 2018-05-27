@@ -1,0 +1,11 @@
+.vscode
+test
+__snapshots__
+scripts
+typings
+.prettierignore
+.prettierrc
+tslint.json
+yarn-error.log
+
+

@@ -8,7 +8,7 @@ export interface IConstantDeclaration {
 
 export type IAbiDeclaration = IConstantDeclaration;
 
-export type IBoolType = "bool";
+export type IBoolType = "bool" | "uint256";
 export type IPrimitiveType = IBoolType;
 
 export type IContract = DeepReadonlyObject<{

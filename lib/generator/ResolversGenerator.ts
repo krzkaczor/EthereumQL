@@ -1,18 +1,19 @@
 import { IContract, IAbiDeclaration } from "../parser/EvmTypes";
-import { groupBy, mapValues } from 'lodash';
+import { groupBy, mapValues } from "lodash";
 
 export class ResolversGenerator {
-  public generateResolvers(contract: IContract): any { // @todo type properly
+  public generateResolvers(contract: IContract): any {
+    // @todo type properly
     return {
       [contract.name]: generateMap(contract.abi),
-    }
+    };
   }
 }
 
 function generateMap(abi: ReadonlyArray<IAbiDeclaration>) {
-  const byName = groupBy(abi, 'name')
+  const byName = groupBy(abi, "name");
 
-  return mapValues(byName, generateResolverForDeclaration)
+  return mapValues(byName, generateResolverForDeclaration);
 }
 
 function generateResolverForDeclaration(declarations: IAbiDeclaration[]) {
@@ -22,6 +23,7 @@ function generateResolverForDeclaration(declarations: IAbiDeclaration[]) {
 
   const declaration = declarations[0];
   return (_root: any, _args: any, _ctx: any) => {
+    console.log("Args: ", _args);
     return 5;
-  }
+  };
 }
