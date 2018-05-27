@@ -2,9 +2,9 @@ import { IContract, IAbiDeclaration } from "../parser/EvmTypes";
 import { groupBy, mapValues } from 'lodash';
 
 export class ResolversGenerator {
-  public generateResolvers(contract: IContract) {
+  public generateResolvers(contract: IContract): any { // @todo type properly
     return {
-      [contract.name]: generateMap(contract.abi);
+      [contract.name]: generateMap(contract.abi),
     }
   }
 }
@@ -22,6 +22,6 @@ function generateResolverForDeclaration(declarations: IAbiDeclaration[]) {
 
   const declaration = declarations[0];
   return (_root: any, _args: any, _ctx: any) => {
-    root[contract][declaration.]
+    return 5;
   }
 }
