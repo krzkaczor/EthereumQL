@@ -1,8 +1,9 @@
 {
-  "name": "EthereumQL",
+  "name": "ethereumql",
   "version": "0.0.1",
   "main": "dist/index.js",
   "license": "MIT",
+  "repository": "https://github.com/krzkaczor/EthereumQL",
   "scripts": {
     "start": "ts-node lib/index.ts",
     "test": "yarn format && yarn tsc && yarn test:mocha",
