@@ -1,0 +1,26 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "sourceMap": true,
+    "types": ["node", "reflect-metadata", "mocha"],
+    "lib": ["es2015"],
+    "target": "es2016",
+    "outDir": "./dist",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "declaration": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "plugins": [
+      {
+        "name": "tslint-language-service",
+        "alwaysShowRuleFailuresAsWarnings": false,
+        "ignoreDefinitionFiles": true,
+        "configFile": "./tslint.json",
+        "disableNoUnusedVariableRule": false,
+        "supressWhileTypeErrorsPresent": false
+      }
+    ]
+  },
+  "include": ["./lib/**/*.ts", "./test/**/*.ts", "./typings/*.ts"]
+}
