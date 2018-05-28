@@ -11,7 +11,8 @@
     "tsc": "tsc --noEmit",
     "format": "prettier --list-different '**/*.ts'",
     "format:fix": "prettier --write '**/*.ts'",
-    "test:mocha": "NODE_ENV=test mocha --require ts-node/register --require ./test/setupTests.ts 'lib/**/*.spec.ts' 'test/**/*.spec.ts'"
+    "test:mocha": "NODE_ENV=test mocha --require ts-node/register --require ./test/setupTests.ts 'lib/**/*.spec.ts' 'test/**/*.spec.ts'",
+    "build": "NODE_ENV=production tsc --outDir ./dist -p tsconfig.prod.json"
   },
   "devDependencies": {
     "@types/bluebird": "^3.5.1",
