@@ -13,5 +13,6 @@ export type IPrimitiveType = IBoolType;
 
 export type IContract = DeepReadonlyObject<{
   name: string; // should be UpperCased
-  abi: IAbiDeclaration[];
+  parsedAbi: IAbiDeclaration[];
+  rawAbi: any;
 }>;

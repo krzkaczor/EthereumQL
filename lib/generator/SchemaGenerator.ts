@@ -18,7 +18,7 @@ export class SchemaGenerator {
     return `
     type ${contract.name} {
       address: String!
-      ${contract.abi.map(generateSchemaForDeclaration).join("\n")}
+      ${contract.parsedAbi.map(generateSchemaForDeclaration).join("\n")}
     }
     `;
   }
@@ -49,6 +49,6 @@ function generateGraphqlTypeForEvmType(evmType: IPrimitiveType): string {
   }
 }
 
-function lowerCaseFirstLetter(s: string) {
+export function lowerCaseFirstLetter(s: string) {
   return s.charAt(0).toLowerCase() + s.slice(1);
 }
