@@ -1,8 +1,7 @@
-import { expect } from "chai";
 import * as snapshot from "snap-shot-it";
 
 import { AbiParser } from "../AbiParser";
-import { exampleAbi, exampleConstant } from "../__fixtures__/abi";
+import { exampleConstant } from "../__fixtures__/abi";
 
 describe("AbiParser", () => {
   it("should work", () => {
