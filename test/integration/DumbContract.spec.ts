@@ -1,10 +1,6 @@
 import { deployContract, readContractAbi } from "./integrationTestUtils";
-import { SchemaGenerator } from "../../lib/generator/SchemaGenerator";
-import { IContract } from "../../lib/parser/EvmTypes";
 
-import { makeExecutableSchema, mockServer } from "graphql-tools";
-import { ResolversGenerator } from "../../lib/generator/ResolversGenerator";
-import { AbiParser } from "../../lib/parser/AbiParser";
+import { mockServer } from "graphql-tools";
 import { web3 } from "./web3";
 import { expect } from "chai";
 import { generateExecutableSchema } from "../../lib";

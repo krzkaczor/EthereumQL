@@ -33,7 +33,7 @@ export class ResolversGenerator {
     return mapValues(byName, decl => this.generateResolverForDeclaration(decl, contract));
   }
 
-  private generateResolverForDeclaration(declarations: IAbiDeclaration[], contract: IContract) {
+  private generateResolverForDeclaration(declarations: IAbiDeclaration[], _contract: IContract) {
     if (declarations.length > 1) {
       throw new Error("Overloads are not supported now");
     }

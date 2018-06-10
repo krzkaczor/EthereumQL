@@ -6,11 +6,13 @@
   "repository": "https://github.com/krzkaczor/EthereumQL",
   "scripts": {
     "start": "ts-node lib/index.ts",
-    "test": "yarn format && yarn tsc && yarn test:mocha",
-    "test:fix": "yarn format:fix && yarn tsc && yarn test:mocha",
+    "test": "yarn tslint && yarn format && yarn tsc && yarn test:mocha",
+    "test:fix": "yarn tslint:fix && yarn format:fix && yarn tsc && yarn test:mocha",
     "tsc": "tsc --noEmit",
     "format": "prettier --list-different '**/*.ts'",
     "format:fix": "prettier --write '**/*.ts'",
+    "tslint": "tslint -c ./tslint.json --project ./tsconfig.json --format stylish",
+    "tslint:fix": "tslint -c ./tslint.json --project ./tsconfig.json --format stylish --fix",
     "test:mocha": "NODE_ENV=test mocha --require ts-node/register --require ./test/setupTests.ts 'lib/**/*.spec.ts' 'test/**/*.spec.ts'",
     "build": "NODE_ENV=production tsc --outDir ./dist -p tsconfig.prod.json"
   },
